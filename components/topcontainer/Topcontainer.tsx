@@ -1,9 +1,13 @@
 import React from 'react'
-import { Avatar, AvatarGroup, Box, Button, Heading, HStack, Image, Text, Wrap, WrapItem } from '@chakra-ui/react'
+import { Avatar, AvatarGroup, Box, Button, Flex, Heading, HStack, Image, Text, Wrap, WrapItem ,Link} from '@chakra-ui/react'
 
 export default function Topcontainer() {
     return (
-        <Box backgroundImage={"/images/back1.webp"} backgroundSize={"contain"} py={20}>
+        <Box 
+        as="section"
+           backgroundImage={"/images/back1.webp"} 
+           backgroundSize={"contain"} 
+           py="20">
             <HStack>
 
                 {/* left Area */}
@@ -28,14 +32,20 @@ export default function Topcontainer() {
                 </Box>
             </HStack>
             <Box ml="13%">
-            <AvatarGroup size="md" max={4} MT="5">
+            <Flex>
+            <AvatarGroup size="md" max={4} mt="1">
                 
                     <Avatar name='Sir Zia Khan' src='https://pbs.twimg.com/profile_images/1478630664190795778/xuBHOC65_400x400.jpg' />
                     <Avatar name='Sir Adil Altaf' src='https://avatars.githubusercontent.com/u/62209503?v=4' />
-                    <Avatar name='Sir OwaisAli' src='https://chakrademosite-ows-ali.vercel.app/me.jpg' />
                     <Avatar name='Sir Qasim' src='/images/qasim.jpeg' />
+                    <Avatar name='Sir OwaisAli' src='https://chakrademosite-ows-ali.vercel.app/me.jpg' />
 
             </AvatarGroup>
+            <Text  mt= "3" ml ="5"  color={"white"}>
+                    Created By : Naheed Deedar Trainer : {""}
+                <Link href ="https://www.youtube.com/watch?v=TbWY1-Xtyi8" target={"_blank"} color="blue">Owais Ali</Link> 
+            </Text>
+            </Flex>
             </Box>
 
         </Box>

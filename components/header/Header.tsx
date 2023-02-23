@@ -1,12 +1,12 @@
 'use client'
 import React from 'react';
 import { SearchIcon , MoonIcon} from "@chakra-ui/icons";
-import { Box, Button, Flex, HStack, Image, List, ListItem} from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Image, List,Link, ListItem} from "@chakra-ui/react";
 
 export default function Header() {
   return (
-    <div>
-      <Box  padding={50}>
+    
+      <Box  padding={50} as="header">
       <Flex justifyContent={"space-around"} alignItems={"center"}>
       {/* Left Nav area */}
       <Box>
@@ -30,13 +30,14 @@ export default function Header() {
         <Box pl="15" as="span">
           <SearchIcon w="20px" h="20px"/>
          </Box>
-       
+       <Link href ="https://www.piaic.org" target={"_blank"}>
          <Button variant={"outline"}> 
             go to piaic
          </Button>
+        </Link>
        </Box>
        </Flex>
     </Box>
-    </div>
+    
   )
 }
